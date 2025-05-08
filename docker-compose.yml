@@ -105,6 +105,8 @@ services:
       SPRING_RABBITMQ_PASSWORD: guest
       SPRING_DATA_MONGODB_URI: mongodb://mongodb-message-service:27017/message_db
     restart: unless-stopped
+    volumes:
+      - .:/app
 
 volumes:
   mysql_data:
