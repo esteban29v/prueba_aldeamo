@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    host: rabbitmq-message-service
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 10000
+    template:
+      retry:
+        enabled: true
+        initial-interval: 1000
+        max-interval: 10000
+        max-attempts: 10
